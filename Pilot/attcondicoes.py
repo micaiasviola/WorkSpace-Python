@@ -1,4 +1,3 @@
-# # #armazenando condições
 
 ingressos = 50
 compradores = 250
