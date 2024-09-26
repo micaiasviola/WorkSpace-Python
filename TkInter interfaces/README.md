@@ -1,1 +1,1 @@
-![Meu Diagrama](imagens/meu_diagrama.png)
+![Exemplo prático](imagens/image.png)
