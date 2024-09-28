@@ -45,7 +45,7 @@ def buscar_modelos(brand):
         return []
 
 
-marcas_disponiveis = ["Honda", "Toyota", "Nissan", "Mazda"]
+marcas_disponiveis = ["Honda", "Toyota", "Nissan", "Mazda", "Bmw", "Chevrolet"]
 carro_selecionado = marcas_disponiveis[0]
 
 
