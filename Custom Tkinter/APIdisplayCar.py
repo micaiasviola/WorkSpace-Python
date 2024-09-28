@@ -1,6 +1,6 @@
 import customtkinter as ctk
 import requests
-
+import os  # Para trabalhar com caminhos absolutos
 
 class MarcaCarro:
     def __init__(self, nome, modelos):
@@ -20,13 +20,13 @@ def centralizar_janela(janela, largura, altura):
 
 
 ctk.set_appearance_mode("dark")
-icone_janela_principal = "./iconeprincipal.ico"
+icone_janela_principal = os.path.join(os.path.dirname(__file__), "iconeprincipal.ico")
 
 janela_principal = ctk.CTk()
 janela_principal.title("DisplayCar")
 janela_principal.geometry(centralizar_janela(janela_principal, 300, 400))
 
-janela_principal.iconbitmap(icone_janela_principal)# define o icone
+janela_principal.iconbitmap(icone_janela_principal)
 
 selecao_frame = ctk.CTkFrame(janela_principal, corner_radius=10)
 selecao_frame.pack(pady=20, padx=10, fill=ctk.X)
