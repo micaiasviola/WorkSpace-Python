@@ -21,7 +21,7 @@ class Usuario:
             conexao = mysql.connector.connect(
                 host="localhost",      # Endereço do servidor MySQL
                 user="root",    # Nome de usuário do MySQL
-                password="admin",  # Senha do MySQL
+                password="",  # Senha do MySQL
                 database="users"   # Nome do banco de dados
             )
             cursor = conexao.cursor()
@@ -52,14 +52,14 @@ class Usuario:
             conexao = mysql.connector.connect(
                 host="localhost",      # Endereço do servidor MySQL
                 user="root",    # Nome de usuário do MySQL
-                password="admin",  # Senha do MySQL
+                password="",  # Senha do MySQL
                 database="users"   # Nome do banco de dados
             )
             cursor = conexao.cursor()
 
             # Comando SQL para inserir o usuário
-            sql = "INSERT INTO usuarios (nome, senha, cargo) VALUES (%s, %s)"
-            cursor.execute(sql, (self.nome, self.senha, self.cargo))
+            sql = "INSERT INTO usuarios (nome, senha) VALUES (%s, %s)"
+            cursor.execute(sql, (self.nome, self.senha))
 
             conexao.commit()
             print("Usuário cadastrado com sucesso!")
