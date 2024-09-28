@@ -20,10 +20,13 @@ def centralizar_janela(janela, largura, altura):
 
 
 ctk.set_appearance_mode("dark")
+icone_janela_principal = "./iconeprincipal.ico"
 
 janela_principal = ctk.CTk()
 janela_principal.title("DisplayCar")
 janela_principal.geometry(centralizar_janela(janela_principal, 300, 400))
+
+janela_principal.iconbitmap(icone_janela_principal)# define o icone
 
 selecao_frame = ctk.CTkFrame(janela_principal, corner_radius=10)
 selecao_frame.pack(pady=20, padx=10, fill=ctk.X)
